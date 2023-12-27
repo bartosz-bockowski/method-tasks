@@ -6,76 +6,117 @@ public class MainMethodsTests {
 
     @Test
     public void testGetBiggerDouble() {
-        Assert.assertEquals(Main.getBiggerDouble(4d, 9d), 9d, 0.001f);
-        Assert.assertEquals(Main.getBiggerDouble(3d, 3d), 0, 0.001f);
+        double result1 = Main.getBiggerDouble(4d, 9d);
+        double result2 = Main.getBiggerDouble(3d, 3d);
+
+        Assert.assertEquals(result1, 9d, 0.001f);
+        Assert.assertEquals(result2, 0, 0.001f);
     }
 
     @Test
     public void testSumAndMultiply() {
-        Assert.assertEquals(Main.sumAndMultiply(3, 4, 2), 14);
+        int result = Main.sumAndMultiply(3, 4, 2);
+
+        Assert.assertEquals(result, 14);
     }
 
     @Test
     public void testIsEven() {
-        Assert.assertTrue(Main.isEven(6));
-        Assert.assertFalse(Main.isEven(5));
+        boolean result1 = Main.isEven(6);
+        boolean result2 = Main.isEven(5);
+
+        Assert.assertTrue(result1);
+        Assert.assertFalse(result2);
     }
 
     @Test
     public void testSumWithCondition() {
-        Assert.assertEquals(Main.sumWithCondition(15, 30), 19);
-        Assert.assertEquals(Main.sumWithCondition(28, 17), 19);
-        Assert.assertEquals(Main.sumWithCondition(7, 30), 37);
+        int result1 = Main.sumWithCondition(15, 30);
+        int result2 = Main.sumWithCondition(28, 17);
+        int result3 = Main.sumWithCondition(7, 30);
+
+        Assert.assertEquals(result1, 19);
+        Assert.assertEquals(result2, 19);
+        Assert.assertEquals(result3, 37);
     }
 
     @Test
     public void testStringZAndY() {
-        Assert.assertEquals(Main.stringZAndY("zebra"), "zzz");
-        Assert.assertEquals(Main.stringZAndY("money"), "yyy");
-        Assert.assertEquals(Main.stringZAndY("zebry"), "zzyy");
+        String result1 = Main.stringZAndY("zebra");
+        String result2 = Main.stringZAndY("money");
+        String result3 = Main.stringZAndY("zebry");
+
+        Assert.assertEquals(result1, "zzz");
+        Assert.assertEquals(result2, "yyy");
+        Assert.assertEquals(result3, "zzyy");
     }
 
     @Test
     public void testContainsBad() {
-        Assert.assertTrue(Main.containsBad("badxxx"));
-        Assert.assertTrue(Main.containsBad("xbadxx"));
-        Assert.assertTrue(Main.containsBad("xxbadxxx"));
-        Assert.assertFalse(Main.containsBad("xxxbadxx"));
+        boolean result1 = Main.containsBad("badxxx");
+        boolean result2 = Main.containsBad("xbadxx");
+        boolean result3 = Main.containsBad("xxbadxxx");
+        boolean result4 = Main.containsBad("xxxbadxx");
+
+        Assert.assertTrue(result1);
+        Assert.assertTrue(result2);
+        Assert.assertTrue(result3);
+        Assert.assertFalse(result4);
     }
 
     @Test
     public void testCountChar() {
-        Assert.assertEquals(Main.countChar("cadxjtgqxonvznx", 'x'), 3);
+        int result = Main.countChar("cadxjtgqxonvznx", 'x');
+
+        Assert.assertEquals(result, 3);
     }
 
     @Test
     public void testGetFactorial() {
-        Assert.assertEquals(Main.getFactorial(6), 720);
-        Assert.assertEquals(Main.getFactorial(0), 0);
-        Assert.assertEquals(Main.getFactorial(1), 1);
+        int result1 = Main.getFactorial(6);
+        int result2 = Main.getFactorial(0);
+        int result3 = Main.getFactorial(1);
+
+        Assert.assertEquals(result1, 720);
+        Assert.assertEquals(result2, 0);
+        Assert.assertEquals(result3, 1);
     }
 
     @Test
     public void testUnitsGreaterThanTens() {
-        Assert.assertTrue(Main.unitsGreaterThanTens(83));
-        Assert.assertTrue(Main.unitsGreaterThanTens(3));
-        Assert.assertFalse(Main.unitsGreaterThanTens(39));
+        boolean result1 = Main.unitsGreaterThanTens(83);
+        boolean result2 = Main.unitsGreaterThanTens(3);
+        boolean result3 = Main.unitsGreaterThanTens(39);
+
+        Assert.assertTrue(result1);
+        Assert.assertTrue(result2);
+        Assert.assertFalse(result3);
     }
 
     @Test
     public void testPower() {
-        Assert.assertEquals(Main.power(2, -3), 0.125, 0.0001);
-        Assert.assertEquals(Main.power(8, 4), 4096, 0.0001);
-        Assert.assertEquals(Main.power(300, 0), 1, 0.0001);
+        float result1 = Main.power(2, -3);
+        float result2 = Main.power(8, 4);
+        float result3 = Main.power(300, 0);
+
+        Assert.assertEquals(result1, 0.125, 0.0001);
+        Assert.assertEquals(result2, 4096, 0.0001);
+        Assert.assertEquals(result3, 1, 0.0001);
     }
 
     @Test
     public void testIsSquared() {
-        Assert.assertTrue(Main.isSquared(16));
-        Assert.assertTrue(Main.isSquared(64));
-        Assert.assertFalse(Main.isSquared(63));
-        Assert.assertFalse(Main.isSquared(65));
-        Assert.assertFalse(Main.isSquared(13));
+        boolean result1 = Main.isSquared(16);
+        boolean result2 = Main.isSquared(64);
+        boolean result3 = Main.isSquared(63);
+        boolean result4 = Main.isSquared(65);
+        boolean result5 = Main.isSquared(13);
+
+        Assert.assertTrue(result1);
+        Assert.assertTrue(result2);
+        Assert.assertFalse(result3);
+        Assert.assertFalse(result4);
+        Assert.assertFalse(result5);
     }
-    
+
 }

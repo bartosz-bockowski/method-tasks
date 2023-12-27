@@ -58,10 +58,12 @@ public class Main {
 
     public static float power(float number, int exponent) {
 //        return (int) Math.pow(number,exponent);
+
 //        return IntStream.rangeClosed(1,exponent)
 //                .map(x -> number)
 //                .reduce((x,y) -> x * y)
 //                .orElse(1);
+        
         float result = 1;
         for (int i = 0; i < exponent; i++) {
             result *= (int) number;
